@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Conifg 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+    <typeAliases>
+        <package name="com.xiaoj.crud.bean"/>
+    </typeAliases>
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+            <!--配置分页合理化，防止超出页码-->
+            <property name="reasonable" value="true"/>
+            <!-- config params as the following -->
+            <property name="param1" value="value1"/>
+        </plugin>
+    </plugins>
+</configuration>
